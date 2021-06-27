@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.campus.vcamp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="VCampp"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".LoginActivity"></activity>
+        <activity
+            android:name=".teachers_primary_notification_activity"
+            android:exported="true" />
+        <activity
+            android:name=".student_assignment_status_checker"
+            android:exported="true" />
+        <activity
+            android:name=".student_dept_notification_activity"
+            android:exported="true" />
+        <activity android:name=".student_class_notification_activity" />
+        <activity android:name=".image_retrieval_and_display_for_chat" />
+        <activity
+            android:name=".class_chat_activity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".student_marks_display_activity" />
+        <activity android:name=".teacher_leave_acceptance" />
+        <activity android:name=".student_leave_status" />
+        <activity android:name=".StudentHomeActivity" />
+        <activity android:name=".CreateStudent" />
+        <activity android:name=".TeacherHomeActivity" />
+        <activity android:name=".CreateStaff" />
+<!--        <activity android:name=".LoginActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+        <activity android:name=".splash_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

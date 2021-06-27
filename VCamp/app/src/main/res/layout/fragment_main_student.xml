@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/studentMainFragmentImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        android:text="Welcome to VCamp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timetableText"
+        android:layout_width="wrap_content"
+        android:textSize="22sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="@string/time_table"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/timeTableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TableLayout
+        android:id="@+id/timeTableLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/timetableText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Days"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:text="Tuesday"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Wednesday"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Thursday"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Friday"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="I"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/ITue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:text="II"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/IIMon"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IITue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIWed"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:text="III"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/IIIMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIITue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIIWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIIThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IIIFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="IV"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/IVMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IVTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IVWed"
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IVThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/IVFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="V"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/VMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/VTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/VWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/VThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/VFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowClassButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeTableLayout"
+        android:layout_marginTop="20dp"
+        app:shadowSpread="3">
+
+        <Button
+            android:id="@+id/studentClassChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:padding="20dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/student_home_tab_background"
+            android:paddingStart="20dp"
+            android:text="Class Chat"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+    </com.blure.complexview.ComplexView>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowDeptButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shadowClassButton"
+        app:shadowSpread="3">
+
+        <Button
+            android:id="@+id/studentDeptChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:padding="20dp"
+            android:background="@drawable/student_home_tab_background"
+            android:paddingStart="20dp"
+            android:text="Department Chat"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+    </com.blure.complexview.ComplexView>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowAttendanceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shadowDeptButton"
+        app:shadowSpread="3">
+
+        <Button
+            android:id="@+id/studentAttendanceInsert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:padding="20dp"
+            android:background="@drawable/student_home_tab_background"
+            android:paddingStart="20dp"
+            android:text="Insert Attendance"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+    </com.blure.complexview.ComplexView>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowApplyLeaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shadowAttendanceButton"
+        app:shadowSpread="3">
+
+        <Button
+            android:id="@+id/studentLeaveApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:padding="20dp"
+            android:background="@drawable/student_home_tab_background"
+            android:paddingStart="20dp"
+            android:text="Apply for Leave"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+    </com.blure.complexview.ComplexView>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowUploadAssignmentButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shadowApplyLeaveButton"
+        app:shadowSpread="3">
+
+        <Button
+            android:id="@+id/studentUploadAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:padding="20dp"
+            android:background="@drawable/student_home_tab_background"
+            android:paddingStart="20dp"
+            android:text="Upload Assignment"
+            android:textAlignment="textStart"
+            android:textAllCaps="false" />
+
+    </com.blure.complexview.ComplexView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

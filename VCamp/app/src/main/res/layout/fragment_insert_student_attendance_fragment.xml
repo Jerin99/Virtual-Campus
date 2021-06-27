@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".insert_student_attendance_fragment">
+
+    <TextView
+        android:id="@+id/attendaceHeadtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Attendance"
+        android:textSize="28sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/mainErrorMsginAttedance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/attendaceHeadtext"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowDeptButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainErrorMsginAttedance"
+        app:shadowSpread="4">
+
+        <RelativeLayout
+            android:id="@+id/insertAttendanceRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/student_home_tab_background">
+
+            <EditText
+                android:id="@+id/semForInsertingAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                android:hint="Enter Semester"
+                android:layout_alignParentTop="true"
+                android:inputType="number"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginHorizontal="10dp"
+                android:paddingVertical="10dp"/>
+
+            <TextView
+                android:id="@+id/errorMsgForCheckBoxesInAttendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/red"
+                android:layout_below="@+id/semForInsertingAttendance"/>
+
+            <CheckBox
+                android:id="@+id/insertAttendanceBeforeInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:layout_marginStart="20dp"
+                android:padding="10dp"
+                android:text="Morning"
+                android:layout_below="@+id/errorMsgForCheckBoxesInAttendance"/>
+
+            <CheckBox
+                android:id="@+id/insertAttendanceAfterInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:padding="10dp"
+                android:text="Afternoon"
+                android:layout_below="@+id/insertAttendanceBeforeInterval"/>
+
+            <Button
+                android:id="@+id/enterAttendanceButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Insert Attendance"
+                android:background="@drawable/password_reset_buttons"
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/insertAttendanceAfterInterval"/>
+
+        </RelativeLayout>
+
+    </com.blure.complexview.ComplexView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

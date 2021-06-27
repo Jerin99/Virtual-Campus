@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".student_type_checker_for_assignment_fragment">
+
+    <Button
+        android:id="@+id/firstSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="First Semester"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/secondSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="Second Semester"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstSemAssignmentDisplay"/>
+
+    <Button
+        android:id="@+id/thirdSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="Third Semester"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondSemAssignmentDisplay"/>
+
+    <Button
+        android:id="@+id/fourthSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="Fourth Semester"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thirdSemAssignmentDisplay"/>
+
+    <Button
+        android:id="@+id/fifthSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="Fifth Semester"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fourthSemAssignmentDisplay"/>
+
+    <Button
+        android:id="@+id/sixthSemAssignmentDisplay"
+        android:layout_width="match_parent"
+        android:background="@drawable/student_main_tab_layouts"
+        android:layout_height="wrap_content"
+        android:text="Sixth Semester"
+        android:layout_margin="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fifthSemAssignmentDisplay"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

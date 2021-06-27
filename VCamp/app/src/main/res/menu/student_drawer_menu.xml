@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/homepage"
+                android:icon="@drawable/ic_home"
+                android:title="@string/homepage" />
+        </menu>
+    </item>
+
+    <item android:title="Notifications">
+        <menu>
+            <item
+                android:icon="@drawable/department_notification"
+                android:id="@+id/studentClassChat"
+                android:title="Class Notifications"/>
+            <item
+                android:icon="@drawable/class_notification"
+                android:id="@+id/studentDeptChat"
+                android:title="Department Notifications"/>
+        </menu>
+    </item>
+
+    <item android:title="Your Info">
+        <menu>
+            <item
+                android:icon="@drawable/ic_people"
+                android:id="@+id/studentYourAttendance"
+                android:title="Your Attendance"/>
+            <item
+                android:icon="@drawable/ic_people"
+                android:id="@+id/studentYourInfo"
+                android:title="Your Info"/>
+
+            <item
+                android:id="@+id/knowStudentLeave"
+                android:icon="@drawable/ic_people"
+                android:title="Your Leave" />
+
+            <item
+                android:icon="@drawable/ic_people"
+                android:id="@+id/assignmentStatusChecker"
+                android:title="Your Assignments"/>
+
+            <item
+                android:id="@+id/knowYourMarks"
+                android:icon="@drawable/ic_people"
+                android:title="Your Marks" />
+        </menu>
+    </item>
+
+    <item android:title="Uploads">
+        <menu>
+            <item
+                android:icon="@drawable/leave"
+                android:id="@+id/student_apply_for_leave"
+                android:title="Apply Leave"/>
+
+            <item
+                android:icon="@drawable/ic_people"
+                android:id="@+id/student_attendance"
+                android:title="Attendance"/>
+
+
+            <item
+                android:id="@+id/studentAssignmentUploadMenuTab"
+                android:icon="@drawable/assignment"
+                android:title="Upload Assignments" />
+
+            <item
+                android:icon="@drawable/user_information"
+                android:id="@+id/about"
+                android:title="@string/update_information"/>
+            <item
+                android:icon="@drawable/ic_baseline_lock_24"
+                android:id="@+id/changePwd"
+                android:title="Change Password"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_log_out"
+        android:title="Logout" />
+
+</menu>

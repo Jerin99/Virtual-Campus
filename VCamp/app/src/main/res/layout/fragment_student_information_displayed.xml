@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".student_information_displayed">
+
+    <TextView
+        android:id="@+id/StudentInformationHeadText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student Information"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/studentAdmissionIDForInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Admission ID"
+        app:layout_constraintEnd_toStartOf="@+id/teacherStudentInfoDisplayingButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudentInformationHeadText" />
+
+    <Button
+        android:id="@+id/teacherStudentInfoDisplayingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/password_reset_buttons"
+        android:text="Get Info"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/studentAdmissionIDForInformation"
+        app:layout_constraintTop_toBottomOf="@+id/StudentInformationHeadText"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentAdmissionIDForInformation">
+
+        <TableLayout
+            android:id="@+id/teacherStudentInfoDisplaying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/studentAdmissionIDForInformation">
+
+            <TableRow android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="22sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/white"
+                    android:text="Admission ID"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:text=" : "/>
+                <TextView
+                    android:id="@+id/StudentsInfoDisplayingAdmission"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:layout_marginStart="10dp"/>
+
+            </TableRow>
+            <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Department"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingDepartment"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp"
+                android:text="Year"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingYear"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:text="Email ID"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingEmail"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text="Full Name"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingFullName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:text="Ph. Number"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingPhone"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp"
+                android:text="Guardian'n Name"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingGuardianName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:textSize="22sp"
+                android:text="Guardian's No"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingGuardianNumber"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Address"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingAddress"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Semester I"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingsemI"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+    </TableRow>
+
+    <TableRow android:paddingTop="10dp">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:layout_marginStart="10dp"
+            android:text="Semester II"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:text=" : "/>
+        <TextView
+            android:id="@+id/StudentsInfoDisplayingsemII"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"/>
+
+    </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Semester III"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingsemIII"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Semester IV"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingsemIV"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Semester V"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingsemV"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        <TableRow android:paddingTop="10dp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:textSize="22sp"
+                android:layout_marginStart="10dp"
+                android:text="Semester VI"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:text=" : "/>
+            <TextView
+                android:id="@+id/StudentsInfoDisplayingsemVI"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
+
+        </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+
+<!--        <TableLayout-->
+<!--        android:id="@+id/teacherStudentInfoDisplaying"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/studentAdmissionIDForInformation">-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="Admission ID"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingAdmission"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Department"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingDepartment"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text="Year"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingYear"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text="Email ID"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingEmail"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text="Full Name"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingFullName"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Ph. Number"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingPhone"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text="Guardian'n Name"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingGuardianName"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text="Guardian's No"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingGuardianNumber"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Address"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingAddress"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Semester I"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingsemI"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--    </TableRow>-->
+
+<!--    <TableRow android:paddingTop="10dp">-->
+
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textSize="22sp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:text="Semester II"/>-->
+<!--        <TextView-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="22sp"-->
+<!--            android:text=" : "/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/StudentsInfoDisplayingsemII"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="22sp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginStart="10dp"/>-->
+
+<!--    </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Semester III"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingsemIII"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Semester IV"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingsemIV"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Semester V"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingsemV"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--        <TableRow android:paddingTop="10dp">-->
+
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:text="Semester VI"/>-->
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="22sp"-->
+<!--                android:text=" : "/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/StudentsInfoDisplayingsemVI"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="22sp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+<!--        </TableRow>-->
+
+<!--    </TableLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

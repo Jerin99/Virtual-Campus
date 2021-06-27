@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/student_back"
+    tools:context=".teachers_primary_notification_activity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/teacherPrimaryNotificationRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/primaryNotificationRelativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/primaryNotificationRelativeLayout">
+
+        <FrameLayout
+            android:id="@+id/primaryNotificationContainerForAttach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/primaryNotificationRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="60dp"
+        android:background="@drawable/chat_layout_background_display"
+        app:layout_constraintTop_toBottomOf="@+id/teacherPrimaryNotificationRecyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/primaryNotificationEmojiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:padding="5dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_baseline_emoji_emotions_24"/>
+
+        <ImageButton
+            android:id="@+id/primaryNotificationAttachButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/fui_transparent"
+            android:padding="5dp"
+            android:layout_toEndOf="@+id/primaryNotificationEmojisToSelect"
+            android:src="@drawable/ic_baseline_attach_file_24"/>
+
+        <ImageButton
+            android:id="@+id/primaryNotificationSendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:padding="5dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_baseline_send_24"
+            android:visibility="gone"
+            android:layout_toEndOf="@+id/primaryNotificationAttachButton"/>
+
+        <ImageButton
+            android:id="@+id/primaryNotificationSendAudioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:padding="5dp"
+            android:background="@color/fui_transparent"
+            android:src="@drawable/ic_baseline_mic_24"
+            android:layout_toEndOf="@+id/primaryNotificationAttachButton"/>
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/primaryNotificationEmojisToSelect"
+            app:layout_widthPercent="65%"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="22sp"
+            android:layout_marginBottom="5dp"
+            android:hint="Type your text here"
+            android:background="@drawable/chat_edittext_background_display"
+            android:paddingStart="15dp"
+            android:paddingEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/primaryNotificationEmojiButton"
+            android:layout_width="0dp"/>
+
+        <Chronometer
+            android:id="@+id/primaryNotificationForAudioRecording"
+            android:layout_width="72dp"
+            android:layout_height="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-84dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="end"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:layout_marginBottom="18dp"
+            android:layout_toStartOf="@+id/primaryNotificationAttachButton"
+            android:layout_toEndOf="@+id/EmojisToSelect"
+            android:textSize="20sp" />
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

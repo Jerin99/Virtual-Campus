@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/staff_back"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/login_image"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Create Account"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="448dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/account_creation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598">
+
+        <EditText
+            android:id="@+id/staffEmail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:autofillHints=""
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/staffFullName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/staffEmail"
+            android:layout_marginTop="25dp"
+            android:autofillHints=""
+            android:hint="Full Name"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/staffPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/staffFullName"
+            android:layout_marginTop="25dp"
+            android:autofillHints=""
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlSymmetry,TextFields" />
+
+        <EditText
+            android:id="@+id/staffPasswd"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/staffPhoneNumber"
+            android:layout_marginTop="25dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/staffKey"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/staffPasswd"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="120dp"
+            android:autofillHints=""
+            android:hint="Key"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            tools:ignore="RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowLoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="20dp"
+        app:shadow="true"
+        android:layout_marginVertical="50dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="25dp"
+        app:shadowAlpha="100"
+        app:shadowColor="#2962FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783"
+        app:shadowSpread="2">
+
+        <Button
+            android:id="@+id/createStaff"
+            android:layout_width="fill_parent"
+            android:background="@drawable/password_reset_buttons"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:text="Create Account"/>
+
+    </com.blure.complexview.ComplexView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

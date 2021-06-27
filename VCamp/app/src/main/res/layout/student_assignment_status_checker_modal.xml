@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/student_Leave_status_modal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="20dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="10dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shadowSpread="4">
+
+        <RelativeLayout
+            android:id="@+id/knowAssignmentStatusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/student_home_tab_background">
+
+            <TableLayout
+                android:id="@+id/knowAssignmentStatusTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text="Subject"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text=" : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/subjectForAssignmentUploaded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="9dp"
+                        android:textAlignment="textStart"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text="Teacher"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text=" : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/teacherForAssignmentUploaded"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+                <TableRow android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text="Date"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:paddingStart="20dp"
+                        android:text=" : "
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/dateForAssignmentUploaded"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="11dp"
+                        android:layout_marginBottom="2dp"
+                        android:textSize="20sp" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/buttonForAssignmentUploaded"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/knowAssignmentStatusTable"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/rounded_corner_button"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </com.blure.complexview.ComplexView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

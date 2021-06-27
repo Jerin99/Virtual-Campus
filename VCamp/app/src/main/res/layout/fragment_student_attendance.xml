@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".student_attendance">
+
+    <TextView
+        android:id="@+id/applyForAttendanceTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Apply for Leave"
+        android:textSize="28sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.blure.complexview.ComplexView
+        android:id="@+id/shadowDeptButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:radius="10dp"
+        app:shadow="true"
+        app:shadowAlpha="100"
+        app:shadowColor="#000000"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/applyForAttendanceTextview"
+        app:shadowSpread="4">
+
+        <RelativeLayout
+            android:id="@+id/attendanceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/student_home_tab_background">
+
+            <TextView
+                android:id="@+id/dateLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:textColorHint="@color/white"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="9dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Date"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/reasonForLeave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateLeave"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Reason for Leave"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/applyForAttendance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apply for Leave"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="92dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/password_reset_buttons"
+                android:textAllCaps="false"
+                android:layout_below="@+id/reasonForLeave"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/applyForAttendance"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/reasonForLeave"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="92dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="92dp"-->
+<!--                android:background="@drawable/password_reset_buttons"-->
+<!--                android:text="Apply Leave" />-->
+
+        </RelativeLayout>
+
+    </com.blure.complexview.ComplexView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

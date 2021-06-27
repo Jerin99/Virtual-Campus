@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "985473611254",
+    "firebase_url": "https://vcamp-2d0aa.firebaseio.com",
+    "project_id": "vcamp-2d0aa",
+    "storage_bucket": "vcamp-2d0aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:985473611254:android:b3f63e7fb4a7d93fb7c3d7",
+        "android_client_info": {
+          "package_name": "com.campus.vcamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "985473611254-km79rr1afost1qqspbedeeeg0irv4tnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp8EeezTEg2b2cpO_0A0ngxC3TlqRrScc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "985473611254-km79rr1afost1qqspbedeeeg0irv4tnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

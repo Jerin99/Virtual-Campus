@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/primary_screen"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/login_image"
+        android:src="@drawable/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <RelativeLayout
+        android:id="@+id/loginLoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/account_creation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginText"
+        app:layout_constraintVertical_bias="0.098">
+
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:autofillHints=""
+            android:layout_alignParentTop="true"
+            android:hint="@string/username"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/loginUsername"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/forgot_password"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/loginPassword"/>
+
+        <com.blure.complexview.ComplexView
+            android:id="@+id/shadowLoginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:radius="20dp"
+            app:shadow="true"
+            app:shadowAlpha="100"
+            app:shadowColor="#2962FF"
+            android:padding="10dp"
+            android:layout_below="@+id/forgotPasswordText"
+            android:layout_marginTop="30dp"
+            app:shadowSpread="2">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@drawable/password_reset_buttons"
+                android:text="@string/sign_in" />
+
+        </com.blure.complexview.ComplexView>
+
+        <com.blure.complexview.ComplexView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:radius="10dp"
+            app:shadow="true"
+            app:shadowAlpha="100"
+            app:shadowColor="#000000"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/shadowLoginButton"
+            android:layout_marginEnd="28dp"
+            android:layout_marginTop="10dp"
+            app:shadowSpread="2">
+
+            <Button
+                android:id="@+id/createStudent"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/password_reset_buttons"
+                android:text="Create Student" />
+
+        </com.blure.complexview.ComplexView>
+
+        <com.blure.complexview.ComplexView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:radius="10dp"
+            app:shadow="true"
+            app:shadowAlpha="100"
+            app:shadowColor="#000000"
+            android:layout_below="@+id/shadowLoginButton"
+            android:layout_marginStart="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            app:shadowSpread="2">
+
+            <Button
+                android:id="@+id/createStaff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/password_reset_buttons"
+                android:layout_below="@+id/loginButton"
+                android:text="Create Staff" />
+
+        </com.blure.complexview.ComplexView>
+
+<!--        <Button-->
+<!--            android:id="@+id/loginButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="46dp"-->
+<!--            android:layout_below="@+id/forgotPasswordText"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="@string/sign_in" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/createStaff"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="28dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_below="@+id/loginButton"-->
+<!--            android:text="Create Staff" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/createStudent"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="28dp"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_below="@+id/loginButton"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:padding="10dp"-->
+<!--            android:text="Create Student" />-->
+
+    </RelativeLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/loginUsername"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:autofillHints=""-->
+<!--        android:hint="@string/username"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.475"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/loginText" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/loginPassword"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginVertical="1dp"-->
+<!--        android:layout_marginTop="28dp"-->
+<!--        android:hint="@string/password"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textColorHint="@color/black"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.475"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/loginUsername"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/login"-->
+<!--        android:layout_width="382dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:layout_marginVertical="50dp"-->
+<!--        android:layout_marginTop="104dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="@string/sign_in"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.482"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/loginPassword"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/createStaff"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="2dp"-->
+<!--        android:layout_marginVertical="0dp"-->
+<!--        android:layout_marginStart="28dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Create Staff"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.093"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/login"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/createStudent"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="2dp"-->
+<!--        android:layout_marginVertical="0dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:padding="10dp"-->
+<!--        android:text="Create Student"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.763"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/createStaff"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/login"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "VCamp"
+include ':app'

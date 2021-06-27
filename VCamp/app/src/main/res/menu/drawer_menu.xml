@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/teacherHome"
+                android:icon="@drawable/ic_home"
+                android:title="@string/home" />
+        </menu>
+    </item>
+
+    <item android:title="Student">
+        <menu>
+            <item
+                android:icon="@drawable/ic_people"
+                android:id="@+id/primaryNotification"
+                android:title="Primary Notifications"/>
+            <item
+                android:id="@+id/firstYear"
+                android:icon="@drawable/ic_home"
+                android:title="First Year" />
+            <item
+                android:id="@+id/secondYear"
+                android:icon="@drawable/ic_home"
+                android:title="Second Year" />
+            <item
+                android:id="@+id/thirdYear"
+                android:icon="@drawable/ic_home"
+                android:title="Third Year" />
+            <item
+                android:id="@+id/deptChat"
+                android:icon="@drawable/ic_home"
+                android:title="Department Chat" />
+            <item
+                android:id="@+id/changeTimeTable"
+                android:icon="@drawable/ic_home"
+                android:title="Time Table" />
+            <item
+                android:id="@+id/appliedLeave"
+                android:icon="@drawable/ic_home"
+                android:visible="false"
+                android:title="Leave" />
+            <item
+                android:id="@+id/studentAssignment"
+                android:icon="@drawable/ic_home"
+                android:title="Assignments" />
+            <item
+                android:id="@+id/studentMarksSideBar"
+                android:icon="@drawable/rounded_corner_button"
+                android:visible="false"
+                android:title="Student Marks" />
+            <item
+                android:id="@+id/studentInfoSideBar"
+                android:icon="@drawable/rounded_corner_button"
+                android:title="Student Information" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_log_out"
+        android:title="Logout" />
+
+
+</menu>

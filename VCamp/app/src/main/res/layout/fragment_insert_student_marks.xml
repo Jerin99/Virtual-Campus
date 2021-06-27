@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".insert_student_marks">
+
+    <TextView
+        android:id="@+id/studentMarkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insert Marks"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/studentAdmissionIdInInsertingStudentMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="Admission Number"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/studentAdmissionIdInInsertingStudentMarksButton"
+        app:layout_constraintTop_toBottomOf="@+id/studentMarkTitle"
+        android:layout_marginStart="10dp"/>
+    <Button
+        android:id="@+id/studentAdmissionIdInInsertingStudentMarksButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/studentAdmissionIdInInsertingStudentMarks"
+        app:layout_constraintTop_toBottomOf="@+id/studentMarkTitle"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/nameOfTheStudentInInsertingMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="0dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentAdmissionIdInInsertingStudentMarks" />
+
+    <EditText
+        android:id="@+id/semNoOfInsertingMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/semCheckingButton"
+        android:hint="Semester"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameOfTheStudentInInsertingMarks" />
+    <Button
+        android:id="@+id/semCheckingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameOfTheStudentInInsertingMarks"
+        app:layout_constraintStart_toEndOf="@+id/semNoOfInsertingMarks"/>
+
+    <TableLayout
+        android:id="@+id/marksSubjectLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/semNoOfInsertingMarks">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/subjectsNameInInsertingMarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Subject"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/MarksInInsertingMarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="16dp"
+                android:text="Marks"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </TableRow>
+
+        <TableRow android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/subject1Teacher"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject1MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:inputType="number"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/subject2Teacher"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject2MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:inputType="number"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/subject3Teacher"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject3MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="20dp"
+                android:inputType="number"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/subject4Teacher"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject4MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:inputType="number"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/subject5Teacher"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject5MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:inputType="number"
+                android:layout_marginStart="20dp"
+                android:textSize="22dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/subject6Teacher"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/subject6MarkTeacher"
+                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_marginStart="20dp"
+                android:inputType="number"
+                android:backgroundTint="@color/white"
+                android:textSize="22dp"
+                android:textColor="@color/white"/>
+
+        </TableRow>
+
+        <Button
+            android:id="@+id/insertMarks"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Insert Marks"
+            android:layout_marginTop="20dp"/>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

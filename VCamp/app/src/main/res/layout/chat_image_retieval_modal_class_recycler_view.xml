@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:id="@+id/mainConstraintOfChatLayout"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/chatImageRetrieverSenderConstraintlayout"
+        android:layout_width="wrap_content"
+        android:background="@drawable/chat_layout_background_display"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/chatImagelinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:contentPadding="5dp"
+                app:cardCornerRadius="5dp"
+                app:cardUseCompatPadding="true"
+
+                app:cardElevation="3dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/chatRetrivalImageImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/teacher_home_page"
+                    android:scaleType="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chatImageName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:padding="5dp"
+            android:text="haaaaaaai"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/chatImageTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chatImagelinearLayout" />
+
+        <TextView
+            android:id="@+id/chatImageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="10:12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="5dp"
+            app:layout_constraintHorizontal_bias="0.738" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/chatImageRetrieverReceiverConstraintlayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:background="@drawable/chat_layout_background_display"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/chatImageRecieverlinearLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:orientation="vertical"-->
+<!--            tools:ignore="MissingConstraints">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="match_parent"-->
+<!--                app:contentPadding="5dp"-->
+<!--                app:cardCornerRadius="5dp"-->
+<!--                app:cardUseCompatPadding="true"-->
+
+<!--                app:cardElevation="3dp"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/chatRetrivalReceiverImageImageView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:src="@drawable/teacher_home_page"-->
+<!--                    android:scaleType="center"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/chatImageRecieverName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="22sp"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="haaaaaaai"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/chatImageTime"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/chatImagelinearLayout" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/chatImageTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="1dp"-->
+<!--            android:text="10:12"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:padding="5dp"-->
+<!--            app:layout_constraintHorizontal_bias="0.738" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<ImageView-->
+<!--android:id="@+id/chatRetrivalImageImageView"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent"-->
+<!--android:src="@drawable/teacher_home_page"-->
+<!--app:layout_constraintBottom_toBottomOf="parent"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintStart_toStartOf="parent"-->
+<!--app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--<TextView-->
+<!--android:id="@+id/chatImageTime"-->
+<!--android:layout_width="wrap_content"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:text="haaaaaaai"-->
+<!--app:layout_constraintEnd_toEndOf="parent"-->
+<!--app:layout_constraintStart_toStartOf="parent"/>-->

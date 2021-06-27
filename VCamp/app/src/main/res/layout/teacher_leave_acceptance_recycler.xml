@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/teacherLeaveAcceptanceLayout"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/student_main_tab_layouts"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableLayout
+            android:id="@+id/knowLeaveStatusTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text="Name"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text=" : "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/nameOfLeaveAppliedStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="9dp"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text="Applied For"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text=" : "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/dateOfLeaveAppliedStudent"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leaveApprovedFor"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="20sp" />
+
+            </TableRow>
+            <TableRow android:layout_marginTop="10dp">
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text="Reason"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:paddingStart="20dp"
+                    android:text=" : "
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/ReasonForLeaveAppliedStudent"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leaveApprovedFor"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginBottom="2dp"
+                    android:textSize="20sp" />
+
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/leaveAllowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/knowLeaveStatusTable"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corner_button"
+            android:text="Grant"
+            android:backgroundTint="@color/grant"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/leaveDenyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/knowLeaveStatusTable"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="42dp"
+            android:layout_toEndOf="@+id/leaveAllowButton"
+            android:backgroundTint="@color/deny"
+            android:background="@drawable/rounded_corner_button"
+            android:text="Deny"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
